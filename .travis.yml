@@ -1,15 +1,21 @@
 matrix:
+
   include:
-  - os: linux
-    dist: trusty
-    sudo: required
-    file: sculpWeb.zip
+
+    - os: linux
+      dist: trusty
+      sudo: required
+      file: 'sculpWeb.zip'
+
 script:
-- "./dist.sh"
+    - ./dist.sh
+
 deploy:
   provider: releases
   api_key:
-    secure: jb9YAxTkYdZyy8rjimYNr23nwaM1FAUI8uOT8KPwxvhR7lULwhMwVmhQ7Mjwk7DdT1HZiYDm0ir9+ylz7hozivuK6SOeA7eDQk6hb8o7wEMwHECDIWG9aZwzJZoImyM5USzwgvqEDqNpIDvu4pL45eJlJ98DGVUTN89/so2G7dcV2wDWV++GLYwsEpd8K2m6G45Qmeh1D7WEwsfwxpP3/YTYq+hec4THdM440YtjzL8z//d3xbAbgiCl5MaW/TDLoEBMLK7IspGDThuZC/GiFz19DsVYMETkaWXulVdLpS0tAoEaY+NTls4WOiD8/cwrkZQV0zqC2T88d9Fz3xo5sBXOAHvNuuQAyO++dMoINWZjM2iPlcSx6HLDTlsGQlqwfVckKp5rUauZSUfTwh51TnvVyqoMMd+TMz7q6lSzuRxO6FmYf31oB23cbLUEEbeULKBJLRDGl9ZS8ghdsBnE/OeJUma7xpBNVm1BQwN2jaJdSCP1NEBbtxRMwVPg+VUWWCvOPMOlhcSbmqUdyCPu4GA9mtCeg98FIee7zBwTTSL3YtmMHePZiEi/7x1Hr5nQzmueHbJOTasBFJCkiHuJrNDtqDfzTn2FMD9TQrKx7fnrP+v0UfdYxqFtlmEZMIPQXdgfUpdSVrggSGYbLCJ8oyKn3Az9Y9EBd5S0V8plfRQ=
-  file: sculpWeb.zip
+      secure: jb9YAxTkYdZyy8rjimYNr23nwaM1FAUI8uOT8KPwxvhR7lULwhMwVmhQ7Mjwk7DdT1HZiYDm0ir9+ylz7hozivuK6SOeA7eDQk6hb8o7wEMwHECDIWG9aZwzJZoImyM5USzwgvqEDqNpIDvu4pL45eJlJ98DGVUTN89/so2G7dcV2wDWV++GLYwsEpd8K2m6G45Qmeh1D7WEwsfwxpP3/YTYq+hec4THdM440YtjzL8z//d3xbAbgiCl5MaW/TDLoEBMLK7IspGDThuZC/GiFz19DsVYMETkaWXulVdLpS0tAoEaY+NTls4WOiD8/cwrkZQV0zqC2T88d9Fz3xo5sBXOAHvNuuQAyO++dMoINWZjM2iPlcSx6HLDTlsGQlqwfVckKp5rUauZSUfTwh51TnvVyqoMMd+TMz7q6lSzuRxO6FmYf31oB23cbLUEEbeULKBJLRDGl9ZS8ghdsBnE/OeJUma7xpBNVm1BQwN2jaJdSCP1NEBbtxRMwVPg+VUWWCvOPMOlhcSbmqUdyCPu4GA9mtCeg98FIee7zBwTTSL3YtmMHePZiEi/7x1Hr5nQzmueHbJOTasBFJCkiHuJrNDtqDfzTn2FMD9TQrKx7fnrP+v0UfdYxqFtlmEZMIPQXdgfUpdSVrggSGYbLCJ8oyKn3Az9Y9EBd5S0V8plfRQ=
+  skip_cleanup: true
   on:
     repo: rushiraj111/travis-deploy-test
+    tags: true
+    all_branches: true
