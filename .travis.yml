@@ -7,6 +7,9 @@ matrix:
       sudo: required
       file: 'sculpWeb.zip'
 
+script:
+    - ./dist.sh
+
 deploy:
   provider: releases
   api_key:
