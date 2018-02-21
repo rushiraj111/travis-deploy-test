@@ -1,0 +1,18 @@
+matrix:
+
+  include:
+
+    - os: linux
+      dist: trusty
+      sudo: required
+      file: 'sculpWeb.zip'
+
+deploy:
+  provider: releases
+  api_key:
+      secure: "q8Vv/9xXRC73aiM+RqXrBhNSoZRrzvGFbBBcPL+/kh4IwyLJGS0zcGGw1CmR5qEKg1UzZoJRoHiMUX4FEK3Hx7I9bbCB8qaIXvLZSA8r5livWJ21WAyWEtJIpU0Wdltc+vLLHQ1aakjGWJ1zUbUCqpc3elaVZmH671B1esdSuuQlLa8oWMBUPidTYnIMjd9gdk1TrzuUXOK+tvOMGUbC5XMuVrtjBtIa45Eov0iLwHosnGsf+/fpXI72ZbJdY0Vn0obMstvTMXEYG90zbrLLe7dimzZoUp1SQbrmF35FDKKn5LBm5iUCneUKn1OAYvF/3MkTsJql9K6QlFhlrZv1rcDY1aGYR0kzkj9IrT128NdZC/5iti8jH2ZCnafHLo6k7cBfcrD79c+S3owZW3MFOipTMSRzfw3dleQHmHmo9F8hDqh0NAkY+FZqx6JP/HsOrX7DM9gDGReJ+HdGQKz89hGRhij49kOKMuIopjh8yViQxmJpoHuKtIywaJlc43lIEoIdT8kiQ8hT97+jIJISwwRuHUJ6rHnNE8DbORUNVMgRGhYYdwUsvYKzqX0tKF46+Jw6vPKrbRnkToqwH+wt/25QGNpxLcjPAvxirUCe9UEO0KAZW9B92keln9N+kP+p1GcGCsbxaxkBeFYuOf1BJlSFbVCZpMbHeExinSqlPIM="
+  skip_cleanup: true
+  on:
+    repo: rushiraj111/travis-deploy-test
+    tags: true
+    all_branches: true
